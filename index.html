@@ -3,145 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. [Thanasis Georgiadis] - Postdoctoral CV</title>
+    <title>Dr. Thanasis Georgiadis - Postdoctoral CV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <style>
-        /* Custom Styles for Two-Column Layout (Maroon & Gray) */
-        :root {
-            --primary-color: #800000; /* Deep Maroon */
-            --secondary-color: #343a40; /* Dark Gray for text */
-            --background-light: #f8f9fa; /* Light Gray Background */
-            --background-white: #ffffff;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        body {
-            font-family: 'Georgia', serif;
-            color: var(--secondary-color);
-            background-color: var(--background-light);
-            margin: 0;
-            padding: 0;
-            display: flex;               /* keeps left and right side-by-side */
-            flex-direction: row;         /* ensure horizontal layout */
-        }
-
-        
-        /* The Fixed Left Sidebar */
-        .sidebar {
-            width: 350px; /* Fixed width for the left column */
-            background-color: var(--background-white); 
-            padding: 30px;
-            box-shadow: 4px 0 10px rgba(0,0,0,0.1);
-            position: fixed; /* Fixes the sidebar position */
-            top: 0;
-            left: 0;
-            height: 100vh;
-            overflow-y: auto;
-        }
-        
-        .profile-picture {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 4px solid var(--primary-color);
-            object-position: center 20%;
-        }
-
-        /* Elegant icon links in sidebar */
-        .profile-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .profile-link {
-            display: flex;
-            align-items: center;
-            font-size: 0.95rem;
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-weight: 500;
-            padding: 4px 0;
-            transition: color 0.2s ease, transform 0.2s ease;
-        }
-
-        .profile-link i {
-            font-size: 1.2rem;
-            margin-right: 8px;
-            color: var(--primary-color);
-            width: 20px; /* keeps icons aligned */
-            text-align: center;
-        }
-
-        .profile-link:hover {
-            color: var(--primary-color);
-            transform: translateX(3px);
-        }
-
-        .profile-link:hover i {
-            color: var(--primary-color);
-        }
-
-        
-        /* Main Content Area */
-        .main-content {
-            margin-left: 350px; /* Offset the main content by the sidebar width */
-            flex-grow: 1;
-            padding: 30px;
-        }
-        
-        /* Tab Navigation Styling */
-        .nav-tabs .nav-link {
-            color: var(--secondary-color);
-            border-bottom: 3px solid transparent;
-            font-weight: 500;
-        }
-
-        .nav-tabs .nav-link.active {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            background-color: var(--background-white);
-        }
-        
-        .tab-content {
-            background-color: var(--background-white);
-            padding: 25px;
-            border-radius: 0 5px 5px 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-        }
-        
-        .cv-item h5 {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        .cv-item em {
-            color: #6c757d;
-        }
-        
-        /* Responsive adjustments for smaller screens */
-        @media (max-width: 992px) {
-            body {
-                display: block;
-            }
-            .sidebar {
-                position: static;
-                width: auto;
-                height: auto;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                margin-bottom: 20px;
-            }
-            .main-content {
-                margin-left: 0;
-            }
-        }
-    </style>
 </head>
-<body>
-
+<body class="dark-theme">
     <div class="sidebar">
         <div class="text-center">
             <img src="cv-pic.jpeg" alt="Picture" class="profile-picture">
@@ -196,7 +65,7 @@
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="publications-tab" data-bs-toggle="tab" data-bs-target="#publications" type="button" role="tab">
-                    <i class="fas fa-file-alt me-1"></i> Publications
+                    <i class="fas fa-file-alt me-1"></i> Academic Work
                 </button>
             </li>
         </ul>
@@ -205,13 +74,13 @@
             
             <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
                 <h3>Research Focus and Summary</h3>
-                <p>I am a database systems researcher with extensive experience in designing database features and developing scalable data-management solutions. I am currently a Postdoctoral Researcher/Research Associate in the DIMA group at TU Berlin, where I focus on Stream Processing Engines (SPEs) and actively contribute to the <a href="https://github.com/nebulastream/nebulastream">NebulaStream</a> open-source SPE for cloud–edge–sensor deployments.</p>
+                <p>I am a database systems researcher with extensive experience in designing database features and developing scalable data management solutions. I am currently a Postdoctoral Researcher/Research Associate in the DIMA group at TU Berlin, where I focus on Stream Processing Engines (SPEs) and actively contribute to the <a href="https://github.com/nebulastream/nebulastream">NebulaStream</a> open-source SPE for cloud–edge–sensor deployments.</p>
                 <p>I received my PhD, titled “Scalable Management of Complex Spatial Data Types,” from the University of Ioannina, where I focused on developing scalable solutions for big spatial data. I am also the principal designer and developer of <a href="https://github.com/ThanGeo/Hecatoncheir">Hecatoncheir</a>, a high-performance, distributed spatial data–management prototype built in C++ with MPI.</p>
                 
                 <h4 class="mt-4">Key Research Areas</h4>
                 <ul>
-                    <li><b>Spatial Data Management</b>: Spatial Query Optimization, Complex Spatial Data Types, Polygon Approximations, Distributed Geospatial Data Management </li>
-                    <li><b>Database Systems</b>: Indexing, Query Optimization, Concurrency Control, System Internals </li>
+                    <li><b>Spatial Data Management</b>: Spatial Query Optimization, Complex Spatial Data Types, Polygon Approximations, Distributed Geospatial Data Management</li>
+                    <li><b>Database Systems</b>: Indexing, Query Optimization, Concurrency Control, System Internals</li>
                     <li><b>Stream Processing</b></li>
                 </ul>
             </div>
@@ -223,9 +92,9 @@
                 <div class="cv-item mb-4 pb-2 border-bottom">
                     <h5>Postdoctoral Researcher</h5>
                     <p class="mb-1"><em>DIMA & BIFOLD, TU Berlin | Berlin, Germany</em></p>
-                    <p class="mb-1"><em>November, 2025 – Present</em></p>
+                    <p class="mb-1"><em>November 2025 – Present</em></p>
                     <ul>
-                        <li>Contributing to NebulaStream's codebase and driving it forward through research planning.</li>
+                        <li>Contributing to NebulaStream’s codebase and advancing it through research planning.</li>
                         <li>Assisting PhD students with their research.</li>
                     </ul>
                 </div>
@@ -233,20 +102,20 @@
                 <div class="cv-item mb-4 pb-2 border-bottom">
                     <h5>Doctoral Researcher</h5>
                     <p class="mb-1"><em>MESA: In-memory Spatial Analytics Made Scalable, H.F.R.I. | Ioannina, Greece</em></p>
-                    <p class="mb-1"><em>September, 2021 – September, 2025</em></p>
+                    <p class="mb-1"><em>September 2021 – September 2025</em></p>
                     <ul>
                         <li>Studied and proposed novel solutions for scalable spatial data management.</li>
-                        <li>Designed and developed a novel high-performance, distributed spatial data management prototype.</li>
-                        <li>Fulfilled academic duties such as MSc theses supervision, lab assistance and designing/grading assignments.</li>
+                        <li>Designed and developed a new high-performance, distributed spatial data-management prototype.</li>
+                        <li>Fulfilled academic duties such as MSc thesis supervision, lab assistance, and designing/grading assignments.</li>
                     </ul>
                 </div>
 
                 <div class="cv-item mb-4 pb-2 border-bottom">
                     <h5>Research Intern</h5>
                     <p class="mb-1"><em>Archimedes Unit, Athena RC | Athens, Greece</em></p>
-                    <p class="mb-1"><em>July, 2024 – July, 2025</em></p>
+                    <p class="mb-1"><em>July 2024 – July 2025</em></p>
                     <ul>
-                        <li>Studied the application of spatial data management solutions on NLP problems.</li>
+                        <li>Studied the application of spatial data-management solutions to NLP problems.</li>
                         <li>Proposed novel RAG solutions for spatial reasoning tasks over natural language.</li>
                     </ul>
                 </div>
@@ -254,10 +123,10 @@
                 <div class="cv-item mb-4 pb-2 border-bottom">
                     <h5>Research Intern</h5>
                     <p class="mb-1"><em>Huawei Technologies R&D (UK) Ltd. | Edinburgh, United Kingdom</em></p>
-                    <p class="mb-1"><em>September, 2023 – Feburary, 2024</em></p>
+                    <p class="mb-1"><em>September 2023 – February 2024</em></p>
                     <ul>
-                        <li>Designed and implemented query processing features for a large-scale, production-grade graph database.</li>
-                        <li>Alleviated concurrency and scalability related challenges in a multithreaded database system environment.</li>
+                        <li>Designed and implemented query-processing features for a large-scale, production-grade graph database.</li>
+                        <li>Addressed concurrency and scalability challenges in a multithreaded database-system environment.</li>
                     </ul>
                 </div>
                 
@@ -267,29 +136,29 @@
                     <h5>Ph.D. in Computer Science</h5>
                     <p class="mb-1"><em>University of Ioannina | Ioannina, Greece</em></p>
                     <p class="mb-1"><em>2025</em></p>
-                    <p class="mb-0">**Dissertation:** "Scalable Management of Complex Spatial Data Types"</p>
+                    <p class="mb-0"><strong>Dissertation:</strong> "Scalable Management of Complex Spatial Data Types"</p>
                 </div>
 
                 <div class="cv-item mb-4">
-                    <h5>Integrated MSc. in Computer Science</h5>
+                    <h5>Integrated M.Sc. in Computer Science</h5>
                     <p class="mb-1"><em>University of Ioannina | Ioannina, Greece</em></p>
                     <p class="mb-1"><em>2021</em></p>
-                    <p class="mb-0">**Dissertation:** "Development of a Prototype Spatial Data Management System"</p>
+                    <p class="mb-0"><strong>Thesis:</strong> "Development of a Prototype Spatial Data-Management System"</p>
                 </div>
             </div>
 
             <div class="tab-pane fade" id="publications" role="tabpanel" aria-labelledby="publications-tab">
-                <h3>Selected Peer-Reviewed Publications</h3>
-                <p class="alert alert-light border">**Note:** See my <a href="https://scholar.google.com/citations?user=zc-jdDgAAAAJ" class="text-danger">Google Scholar</a> profile for a complete, up-to-date citation list. Any code associated with my work can be found on my GitHub profile with complete instructions.</p>
+                <p class="alert alert-light border"><strong>Note:</strong> See my <a href="https://scholar.google.com/citations?user=zc-jdDgAAAAJ" class="text-danger">Google Scholar</a> profile for a complete, up-to-date citation list. Any code associated with my work can be found on my GitHub profile with complete instructions.</p>
             </div>
             
         </div>
         
         <footer class="text-center py-3 mt-4 text-muted small">
-            Last Updated: [December, 2025]
+            Last Updated: December 2025
         </footer>
         
-    </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
